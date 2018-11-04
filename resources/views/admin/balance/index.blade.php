@@ -19,14 +19,18 @@
     <div class="box">
         <div class="box-header">
         <a href="{{ route('balance.deposit') }}" class="btn btn-primary">Recarregar </a>
-        <a href="" class="btn btn-danger">Sacar </a>
+        @if ($amount > 0)
+        <a href="{{ route('balance.withdrawn') }}" class="btn btn-danger">Sacar </a>
+
+        @endif
         </div>
         <div class="box-body">
+             @include('admin.includes.alerts')
         <div class="small-box bg-green">
               <div class="inner">
                 <h3>R$ {{ $amount }}<sup style="font-size: 20px"></sup></h3>
 
-                <p>Bounce Rate</p>
+                <p>Bounce Rate </p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>

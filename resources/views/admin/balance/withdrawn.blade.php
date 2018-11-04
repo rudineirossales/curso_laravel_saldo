@@ -8,7 +8,7 @@
     <ol class="breadcrumb">
 <li> <a href="" >Dashboard </a>  </li>
 <li> <a href="" > Saldo</a>  </li>
-<li> <a href="" > Recarregar</a>  </li>
+<li> <a href="" > Retirada</a>  </li>
 
 
 </ol>
@@ -20,22 +20,22 @@
 @section('content')
 <div class="box">
     <div class="box-header">
-        <h3>Fazer Recarga</h3>
+        <h3>Fazer Retirada</h3>
     </div>
     <div class="box-body">
 
     @include('admin.includes.alerts')
 
 
-         <form  method="POST" action="{{ route('deposit.store') }}">
+         <form  method="POST" action="{{ route('withdrawn.sotre') }}">
             <div class="form-group">
                {!! csrf_field() !!}
-            <input type="text" name="value" placeholder="Valor da recarga">
+            <input type="text" name="value" placeholder="Valor da retirada">
             
             </div>
             <div class="form-group">
 
-               <button type="submit" class="btn btn-success">Recarregar</button>
+               <button type="submit" class="btn btn-success">Sacar</button>
             
             </div>
          
