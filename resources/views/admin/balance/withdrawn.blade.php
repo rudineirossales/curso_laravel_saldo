@@ -27,7 +27,7 @@
     @include('admin.includes.alerts')
 
 
-         <form  method="POST" action="{{ route('withdrawn.sotre') }}">
+         <form  method="POST" action="{{ route('withdrawn.store') }}">
             <div class="form-group">
                {!! csrf_field() !!}
             <input type="text" name="value" placeholder="Valor da retirada">
